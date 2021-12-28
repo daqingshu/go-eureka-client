@@ -1,6 +1,6 @@
 package eureka
 
 type DiscoveryClient interface {
-    GetRegistryApps() map[string]ApplicationVo
-    GetInstance() *InstanceVo
+	GetRegistryApps() map[string]ApplicationVo
+	GetInstance() *InstanceVo
 }
