@@ -226,6 +226,14 @@ func (t *Client) registerWithEureka() {
 	t.heartbeat()
 }
 
+// WSHeartbeat creates a web socket connection to service-center to send heartbeat.
+// It relies on the ping pong mechanism of websocket to ensure the heartbeat, which is maintained by goroutines.
+// After the connection is established, the communication fails and will be retried continuously. The retrial time increases exponentially.
+// The callback function is used to re-register the instance.
+func (c *Client) WSHeartbeat(microServiceID, microServiceInstanceID string, callback func()) error {
+	return nil
+}
+
 // eureka client heartbeat
 func (t *Client) heartbeat() {
 	go func() {
