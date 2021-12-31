@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"gopkg.in/resty.v1"
+	"github.com/go-resty/resty/v2"
 	"net/http"
 	"strings"
 	"time"
